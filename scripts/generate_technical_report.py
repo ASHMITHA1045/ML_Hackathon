@@ -129,10 +129,12 @@ def build_pdf():
     elements.append(Paragraph("PATHSNAP: DISTRIBUTED MAP-MATCHING & ROUTE RECONSTRUCTION<br/><font size='12'>Comprehensive Technical Report & Verification Document</font>", title_style))
     elements.append(HRFlowable(width="100%", thickness=1.5, color=colors.HexColor('#0284c7'), spaceAfter=12))
 
-    # Executive Metadata Box
+    # Executive Metadata Box & Team Details
     meta_data = [
-        [Paragraph("<b>Project:</b> PathSnap Distributed Map-Matching", table_cell), Paragraph("<b>Target Environment:</b> Conda <code>ml_hackathon</code> (Python 3.10)", table_cell)],
-        [Paragraph("<b>Evaluation Architecture:</b> Two-Laptop (Laptop 1: FastAPI API, Laptop 2: Web UI)", table_cell), Paragraph("<b>Dataset Scale:</b> 90 Trips (80 Train, 10 Student-Test), 227,577 GPS Fixes", table_cell)],
+        [Paragraph("<b>Project:</b> PathSnap Distributed Map-Matching", table_cell), Paragraph("<b>GitHub Repository:</b> <font color='#0284c7'><u>https://github.com/ASHMITHA1045/ML_Hackathon</u></font>", table_cell)],
+        [Paragraph("<b>Member 1:</b> ASHMITHA SRI ANAND (PES2UG24AM031)", table_cell), Paragraph("<b>Member 2:</b> DHRITI L KRISHNA (PES2UG24AM052)", table_cell)],
+        [Paragraph("<b>Member 3:</b> GURIJALA DHEERAJ REDDY (PES2UG24AM059)", table_cell), Paragraph("<b>Member 4:</b> A AISHWARYA (PES2UG24AM001)", table_cell)],
+        [Paragraph("<b>Deployment Topology:</b> Two-Laptop (FastAPI + Leaflet UI)", table_cell), Paragraph("<b>Dataset Scale:</b> 90 Trips (80 Train, 10 Student-Test), 227,577 GPS Fixes", table_cell)],
         [Paragraph("<b>Primary Classifier:</b> HistGradientBoosting (Optuna Tuned)", table_cell), Paragraph("<b>Sequence Decoder:</b> Hidden Markov Model with Viterbi Recurrence", table_cell)]
     ]
     t_meta = Table(meta_data, colWidths=[260, 270])
